@@ -13,7 +13,7 @@ const SplashScreen = ({ navigation }: SplashProp) => {
     navigation.navigate("SignUp");
   };
   return (
-    <View className="flex-1 justify-center items-center">
+    <View className="flex-1 justify-center items-center p-4">
       <Text className="text-3xl">SplashScreen</Text>
       <TouchableOpacity>
         <Text onPress={handlerNavScreen}>Sign Up</Text>

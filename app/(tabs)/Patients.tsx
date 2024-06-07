@@ -3,7 +3,7 @@ import React from "react";
 
 const Patients = () => {
   return (
-    <View>
+    <View className="p-4">
       <Text>Patients tab</Text>
     </View>
   );

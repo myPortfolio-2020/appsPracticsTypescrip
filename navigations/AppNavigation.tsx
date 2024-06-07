@@ -20,7 +20,13 @@ const Stack = createStackNavigator<RootNavParamsList>();
 
 const AppNavigation = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        cardStyle: {
+          backgroundColor: "#FAFCFF",
+        },
+      }}
+    >
       <Stack.Screen
         name="Splash"
         component={SplashScreen}

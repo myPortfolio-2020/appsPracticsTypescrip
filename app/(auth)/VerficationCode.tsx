@@ -13,7 +13,7 @@ const VerficationCode = ({ navigation }: VerificationCodeProp) => {
     navigation.navigate("SignIn");
   };
   return (
-    <View className="flex-1 justify-center items-center">
+    <View className="flex-1 justify-center items-center  p-4">
       <Text className="text-3xl">VerficationCode</Text>
       <TouchableOpacity>
         <Text onPress={handlerNavScreen}>Go To Sign in</Text>
