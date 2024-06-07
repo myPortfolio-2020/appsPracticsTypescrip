@@ -1,16 +1,17 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+
 import AppNavigation from "@/navigations/AppNavigation";
+import { NavigationContainer } from "@react-navigation/native";
 
 const _layout = () => {
-  return(
+  return (
     <>
-    <NavigationContainer independent={true}>
-      <AppNavigation/>
-    </NavigationContainer>
+      <NavigationContainer independent={true}>
+        <AppNavigation />
+      </NavigationContainer>
     </>
-  )
+  );
 };
 
 export default _layout;
