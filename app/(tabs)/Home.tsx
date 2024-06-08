@@ -2,9 +2,17 @@ import { View, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { StackNavigationProp } from "@react-navigation/stack";
+import { TabsParamsList } from "../screens/TabsStackHolder";
+import TabsNavigation from "@/navigations/TabsNavigation";
 
-const Home = () => {
-  const handleTabPatient = () => {};
+interface HomeProp {
+  navigation: StackNavigationProp<TabsParamsList, "Patients">;
+}
+
+const Home = ({ navigation }: HomeProp) => {
+  const handleTabPatient = () => {
+    navigation.navigate("Patients");
+  };
   return (
     <>
       <View className="flex-1 justify-between p-4">
