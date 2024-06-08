@@ -21,14 +21,10 @@ const TabsStackHolder = () => {
     <Stack.Navigator>
       <Stack.Screen name="TabsNavigation" component={TabsNavigation} />
 
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false }}
-      />
-
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Patients" component={Patients} />
       <Stack.Screen name="Schedule" component={Schedule} />
+      <Stack.Screen name="Patients" component={Patients} />
       <Stack.Screen name="Claim" component={Claim} />
     </Stack.Navigator>
   );

@@ -16,9 +16,21 @@ const TabsNavigation = () => {
         component={Home}
         options={{ headerShown: false }}
       />
-      <Tab.Screen name="Patients" component={Patients} />
-      <Tab.Screen name="Schedule" component={Schedule} />
-      <Tab.Screen name="Claim" component={Claim} />
+      <Tab.Screen
+        name="Patients"
+        component={Patients}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Schedule"
+        component={Schedule}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Claim"
+        component={Claim}
+        options={{ headerShown: false }}
+      />
     </Tab.Navigator>
   );
 };
