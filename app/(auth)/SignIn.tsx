@@ -1,24 +1,20 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RootNavParamsList } from "@/navigations/AppNavigation";
+import { RootStackParamList } from "@/navigations/AppNavigation";
 
 interface SignInProp {
-  navigation: StackNavigationProp<RootNavParamsList, "DrawerNavigation">;
+  navigation: StackNavigationProp<RootStackParamList, "SignIn">;
 }
 
 const SignIn = ({ navigation }: SignInProp) => {
-  const handleNavScreen = () => {
-    navigation.navigate("DrawerNavigation");
+  const handlerNavScreen = () => {
+    navigation.navigate("HomeScreen");
   };
-
   return (
-    <View className="flex-1 justify-center items-center  p-4">
-      <Text className="text-3xl">SignIn</Text>
-      <TouchableOpacity>
-        <Text onPress={handleNavScreen}>AppHome Screen</Text>
-      </TouchableOpacity>
+    <View className="flex-1 justify-center items-center p-4">
+      <Text>SignIn</Text>
+      <Text onPress={handlerNavScreen}>HomeMain</Text>
     </View>
   );
 };

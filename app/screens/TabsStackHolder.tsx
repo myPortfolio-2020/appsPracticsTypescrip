@@ -1,32 +1,37 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import TabsNavigation from "@/navigations/TabsNavigation";
-import Patients from "../(tabs)/Patients";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../(tabs)/Home";
+import Patients from "../(tabs)/Patients";
 import Schedule from "../(tabs)/Schedule";
 import Claim from "../(tabs)/Claim";
 
-export type TabsParamsList = {
-  Home: undefined;
-  Patients: undefined;
-  Schedule: undefined;
-  Claim: undefined;
-  TabsNavigation: undefined;
-};
+const Tab = createBottomTabNavigator();
 
-const Stack = createStackNavigator<TabsParamsList>();
 const TabsStackHolder = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="TabsNavigation" component={TabsNavigation} />
-
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Patients" component={Patients} />
-      <Stack.Screen name="Schedule" component={Schedule} />
-      <Stack.Screen name="Patients" component={Patients} />
-      <Stack.Screen name="Claim" component={Claim} />
-    </Stack.Navigator>
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Patients"
+        component={Patients}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Schedule"
+        component={Schedule}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name="Claim"
+        component={Claim}
+        options={{ headerShown: false }}
+      />
+    </Tab.Navigator>
   );
 };
 

@@ -2,10 +2,10 @@ import { View, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RootNavParamsList } from "@/navigations/AppNavigation";
+import { RootStackParamList } from "@/navigations/AppNavigation";
 
 interface SplashProp {
-  navigation: StackNavigationProp<RootNavParamsList, "SignUp">;
+  navigation: StackNavigationProp<RootStackParamList, "SignUp">;
 }
 
 const SplashScreen = ({ navigation }: SplashProp) => {

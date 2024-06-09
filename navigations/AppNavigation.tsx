@@ -2,32 +2,32 @@ import { View, Text } from "react-native";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import SplashScreen from "@/app/screens/SplashScreen";
+import SignIn from "@/app/(auth)/SignIn";
 import SignUp from "@/app/(auth)/SignUp";
 import VerficationCode from "@/app/(auth)/VerficationCode";
-import SignIn from "@/app/(auth)/SignIn";
-import DrawerNavigation from "@/navigations/DrawerNavigation";
+import HomeScreen from "../app/screens/HomeScreen";
 
-export type RootNavParamsList = {
-  Splash: undefined;
-  SignUp: undefined;
+export type RootStackParamList = {
+  SplashScreen: undefined;
   SignIn: undefined;
+  SignUp: undefined;
   VerficationCode: undefined;
-  DrawerNavigation: undefined;
+  HomeScreen: undefined;
 };
-const Stack = createStackNavigator<RootNavParamsList>();
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const AppNavigation = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        cardStyle: {
-          backgroundColor: "#FAFCFF",
-        },
-      }}
-    >
+    <Stack.Navigator>
       <Stack.Screen
-        name="Splash"
+        name="SplashScreen"
         component={SplashScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SignIn"
+        component={SignIn}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -41,13 +41,8 @@ const AppNavigation = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="SignIn"
-        component={SignIn}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="DrawerNavigation"
-        component={DrawerNavigation}
+        name="HomeScreen"
+        component={HomeScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

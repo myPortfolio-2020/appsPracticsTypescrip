@@ -2,15 +2,14 @@ import { View, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { TabsParamsList } from "../screens/TabsStackHolder";
-import TabsNavigation from "@/navigations/TabsNavigation";
+import { tabsStackParamsList } from "../screens/HomeScreen";
 
 interface HomeProp {
-  navigation: StackNavigationProp<TabsParamsList, "Patients">;
+  navigation: StackNavigationProp<tabsStackParamsList, "Patients">;
 }
 
 const Home = ({ navigation }: HomeProp) => {
-  const handleTabPatient = () => {
+  const handleOnpRess: any = () => {
     navigation.navigate("Patients");
   };
   return (
@@ -21,7 +20,7 @@ const Home = ({ navigation }: HomeProp) => {
           <View className="flex flex-row justify-evenly">
             <View className="w-2/4">
               <View className="mr-1 p-3 border-double border-2 rounded border-slate-200">
-                <TouchableOpacity onPress={handleTabPatient}>
+                <TouchableOpacity onPress={handleOnpRess}>
                   <Text className="text-center uppercase text-[#4B9CFF] pb-1">
                     View
                   </Text>
